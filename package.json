@@ -24,7 +24,8 @@
     "test": "node test"
   },
   "dependencies": {
-    "markdown-it": "^10.0.0"
+    "markdown-it": "^10.0.0",
+    "posthtml-parser": "^0.4.2"
   },
   "devDependencies": {
     "posthtml": "^0.12.0"
