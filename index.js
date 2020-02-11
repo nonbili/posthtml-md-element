@@ -12,6 +12,12 @@ module.exports = ({ root = "./", encoding = "utf-8", ...mdOptions } = {}) => {
       const src = path.resolve(root, node.attrs.src);
       const source = fs.readFileSync(src, encoding);
       const html = md.render(source);
+      if (tree.messages) {
+        tree.messages.push({
+          type: "dependency",
+          file: src
+        });
+      }
       return {
         tag: false,
         content: tree.parser(html)
