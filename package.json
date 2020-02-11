@@ -1,0 +1,32 @@
+{
+  "name": "@nonbili/posthtml-md-element",
+  "version": "0.1.0",
+  "description": "A PostHTML plugin to include and render Markdown into HTML",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonbili/posthtml-md-element.git"
+  },
+  "keywords": [
+    "posthtml-plugin",
+    "markdown"
+  ],
+  "author": "Ping Chen",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/nonbili/posthtml-md-element/issues"
+  },
+  "homepage": "https://github.com/nonbili/posthtml-md-element#readme",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node test"
+  },
+  "dependencies": {
+    "markdown-it": "^10.0.0"
+  },
+  "devDependencies": {
+    "posthtml": "^0.12.0"
+  }
+}
