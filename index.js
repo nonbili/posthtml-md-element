@@ -2,8 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const MarkdownIt = require("markdown-it");
 
-module.exports = ({ root = "./", encoding = "utf-8", ...mdOptions } = {}) => {
+module.exports = ({
+  root = "./",
+  encoding = "utf-8",
+  withMd,
+  ...mdOptions
+} = {}) => {
   const md = new MarkdownIt(mdOptions);
+  if (withMd) withMd(md);
 
   return tree => {
     if (!tree.parser) tree.parser = require("posthtml-parser");
